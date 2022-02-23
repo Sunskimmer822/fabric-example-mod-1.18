@@ -14,8 +14,7 @@ public class TestMod implements ModInitializer {
     public static final Item FABRIC_ITEM = new FabricItem(new Item.Settings().group(ItemGroup.MISC));
 
     public static final Block FABRIC_BLOCK = new FabricBlock();
-
-
+    
     @Override
     public void onInitialize() {
         Registry.register(Registry.ITEM, new Identifier("testmod", "fabric_item"), FABRIC_ITEM);
