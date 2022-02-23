@@ -9,7 +9,7 @@ import net.minecraft.sound.BlockSoundGroup;
 public class FabricBlock extends Block {
 
     public FabricBlock() {
-        super(FabricBlockSettings.of(Material.WOOL).breakByHand(false).sounds(BlockSoundGroup.ANCIENT_DEBRIS).strength(7000, 100f));
+        super(FabricBlockSettings.of(Material.WOOL).breakByHand(false).sounds(BlockSoundGroup.ANCIENT_DEBRIS).strength(100, 100f));
     }
     
 }
