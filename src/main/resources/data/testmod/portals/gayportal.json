@@ -1,0 +1,11 @@
+{
+    "block": "testmod:fabric_block",
+    "dim": "minecraft:the_end",
+    "ignitionType": "ITEM",
+    "ignitionSource": "testmod:fabric_item",
+    "r": 255,
+    "g": 192,
+    "b": 203
+  }
+  
+  
