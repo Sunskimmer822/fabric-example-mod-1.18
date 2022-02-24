@@ -7,10 +7,10 @@
     ],
     "key": {
       "X": {
-        "item": "testmod:fabric_item"
+        "item": "shitmod:fabric_item"
       },
       "R": {
-        "item": "testmod:fabric_block"
+        "item": "shitmod:fabric_block"
       },
       "W": {
           "item": "minecraft:iron_block"
@@ -20,7 +20,7 @@
       }
     },
     "result": {
-      "item": "testmod:hausbommer",
+      "item": "shitmod:hausbommer",
       "count": 1
     }
   }

@@ -1,4 +1,4 @@
-package net.test.mod;
+package net.serenas.shitmod;
 
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;

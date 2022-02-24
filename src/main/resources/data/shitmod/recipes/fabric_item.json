@@ -10,14 +10,14 @@
         "item": "minecraft:dragon_head"
       },
       "R": {
-        "item": "testmod:fabric_block"
+        "item": "shitmod:fabric_block"
       },
       "W": {
           "item": "minecraft:netherite_block"
       }
     },
     "result": {
-      "item": "testmod:fabric_item",
+      "item": "shitmod:fabric_item",
       "count": 1
     }
   }

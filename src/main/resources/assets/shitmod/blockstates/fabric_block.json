@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "": { "model": "shitmod:block/fabric_block"}
+    }
+}

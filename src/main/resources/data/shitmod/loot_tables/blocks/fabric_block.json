@@ -6,7 +6,7 @@
         "entries": [
           {
             "type": "minecraft:item",
-            "name": "testmod:fabric_block",
+            "name": "shitmod:fabric_block",
             "functions": [
               {
                 "function": "minecraft:set_count",

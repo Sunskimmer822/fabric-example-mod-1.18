@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "id": "testmod",
+  "id": "shitmod",
   "version": "${version}",
 
-  "name": "Test Mod",
+  "name": "Serena's Shitmod",
   "description": "Just my first go at making a fabric mod",
   "authors": [
-    "Me!"
+    "Me (Sunskimmer82#6969)"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
@@ -14,12 +14,12 @@
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/testmod/icon.png",
+  "icon": "assets/shitmod/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.test.mod.TestMod"
+      "net.serenas.shitmod.Shitmod"
     ]
   },
   "mixins": [

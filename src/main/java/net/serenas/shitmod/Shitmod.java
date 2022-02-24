@@ -1,4 +1,4 @@
-package net.test.mod;
+package net.serenas.shitmod;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -12,7 +12,7 @@ import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-public class TestMod implements ModInitializer {
+public class Shitmod implements ModInitializer {
 
     public static final Item FABRIC_ITEM = new FabricItem(new Item.Settings().group(ItemGroup.MISC));
 
@@ -22,10 +22,10 @@ public class TestMod implements ModInitializer {
     
     @Override
     public void onInitialize() {
-        Registry.register(Registry.ITEM, new Identifier("testmod", "fabric_item"), FABRIC_ITEM);
-        Registry.register(Registry.BLOCK, new Identifier("testmod", "fabric_block"), FABRIC_BLOCK);
-        Registry.register(Registry.ITEM, new Identifier("testmod", "fabric_block"), new BlockItem(FABRIC_BLOCK, new FabricItemSettings().group(ItemGroup.MISC)));
-        Registry.register(Registry.ITEM, new Identifier("testmod", "hausbommer"), HAUSBOMMER_ITEM);
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "fabric_item"), FABRIC_ITEM);
+        Registry.register(Registry.BLOCK, new Identifier("shitmod", "fabric_block"), FABRIC_BLOCK);
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "fabric_block"), new BlockItem(FABRIC_BLOCK, new FabricItemSettings().group(ItemGroup.MISC)));
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "hausbommer"), HAUSBOMMER_ITEM);
         CustomPortalBuilder.beginPortal()  
 .frameBlock(Blocks.DIAMOND_BLOCK)  
 .lightWithItem(Items.ENDER_EYE)  

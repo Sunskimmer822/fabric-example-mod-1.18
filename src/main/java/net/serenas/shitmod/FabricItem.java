@@ -1,4 +1,4 @@
-package net.test.mod;
+package net.serenas.shitmod;
 
 import net.minecraft.entity.TntEntity;
 import net.minecraft.entity.player.PlayerEntity;
