@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      " X ",
+      "WZW",
+      "WRW"
+    ],
+    "key": {
+      "X": {
+        "item": "testmod:fabric_item"
+      },
+      "R": {
+        "item": "testmod:fabric_block"
+      },
+      "W": {
+          "item": "minecraft:iron_block"
+      },
+      "Z": {
+          "item": "minecraft:redstone_block"
+      }
+    },
+    "result": {
+      "item": "testmod:hausbommer",
+      "count": 1
+    }
+  }
