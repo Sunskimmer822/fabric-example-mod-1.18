@@ -1,5 +1,7 @@
 {
     "item.shitmod.fabric_item": "Penis",
     "block.shitmod.fabric_block": "Gay Block",
-    "item.shitmod.hausbommer": "Hausbommer"
+    "item.shitmod.hausbommer": "Hausbommer",
+    "effect.shitmod.exp": "Experience",
+    "effect.shitmod.lean": "Lean"
 }
