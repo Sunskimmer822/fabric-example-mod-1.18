@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "ZZZ",
+      "XRX",
+      "WXW"
+    ],
+    "key": {
+      "X": {
+        "item": "minecraft:glass_bottle"
+      },
+      "R": {
+        "item": "minecraft:slime_block"
+      },
+      "W": {
+          "item": "minecraft:purple_dye"
+      },
+      "Z": {
+          "item": "minecraft:purple_concrete"
+      }
+    },
+    "result": {
+      "item": "shitmod:lean",
+      "count": 6
+    }
+  }
