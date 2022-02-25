@@ -20,7 +20,7 @@ public class FabricItem extends Item {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity PlayerEntity, Hand hand) {
         PlayerEntity.playSound(SoundEvents.BLOCK_AMETHYST_BLOCK_CHIME, 1.0F, 1.0F);
-        for (int i = 0; i < 11; i++) {
+        for (int i = 0; i < 10; i++) {
             world.spawnEntity(new TntEntity(world, PlayerEntity.getX(), PlayerEntity.getY(), PlayerEntity.getZ(), PlayerEntity));
           }
         return new TypedActionResult<ItemStack>(ActionResult.SUCCESS, PlayerEntity.getStackInHand(hand));
