@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "XXX",
+      "XRX",
+      "XXX"
+    ],
+    "key": {
+      "X": {
+        "item": "minecraft:bedrock"
+      },
+      "R": {
+        "item": "minecraft:orange_dye"
+      }
+    },
+    "result": {
+      "item": "shitmod:orange_juice",
+      "count": 64
+    }
+  }
