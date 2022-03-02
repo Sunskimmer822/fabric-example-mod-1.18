@@ -1,6 +1,7 @@
 package net.serenas.shitmod;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
 import net.minecraft.block.Block;
@@ -12,6 +13,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
@@ -33,7 +35,13 @@ public class Shitmod implements ModInitializer {
     
     public static final Item ORANGE_JUICE = new OrangeJuice(new Item.Settings().group(ItemGroup.FOOD).rarity(Rarity.EPIC).food(new FoodComponent.Builder().hunger(200).saturationModifier(10f).snack().meat().alwaysEdible().statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 20*120, 5), 1f).statusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 20*120, 20), 1f).statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 20*120), 1f).statusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 20*120, 3), 1f).statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 20*120, 2), 1f).build()));
 
+    public static final ItemGroup ITEM_GROUP = FabricItemGroupBuilder.build(
+		new Identifier("shitmod", "charms"),
+		() -> new ItemStack(Shitmod.KINGSOUL_CHARM));
+    
+    public static final Item KINGSOUL_CHARM = new kingsoul(new Item.Settings().group(ItemGroup.MISC));
 
+    public static final StatusEffect KINGSOUL_CHARM_EFFECT = new kingsoulEffect();
     
     @Override
     public void onInitialize() {
@@ -53,12 +61,18 @@ public class Shitmod implements ModInitializer {
 
         Registry.register(Registry.ITEM, new Identifier("shitmod", "orange_juice"), ORANGE_JUICE);
 
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "kingsoul_charm"), KINGSOUL_CHARM);
+
+        Registry.register(Registry.STATUS_EFFECT, new Identifier("shitmod", "kingsoul_charm"), KINGSOUL_CHARM_EFFECT);
+
         CustomPortalBuilder.beginPortal()  
 .frameBlock(Blocks.DIAMOND_BLOCK)  
 .lightWithItem(Items.ENDER_EYE)  
 .destDimID(new Identifier("the_end"))  
 .tintColor(45,65,101)  
 .registerPortal();
+
+        
     }
     
 }
