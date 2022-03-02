@@ -35,13 +35,15 @@ public class Shitmod implements ModInitializer {
     
     public static final Item ORANGE_JUICE = new OrangeJuice(new Item.Settings().group(ItemGroup.FOOD).rarity(Rarity.EPIC).food(new FoodComponent.Builder().hunger(200).saturationModifier(10f).snack().meat().alwaysEdible().statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 20*120, 5), 1f).statusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 20*120, 20), 1f).statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 20*120), 1f).statusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 20*120, 3), 1f).statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 20*120, 2), 1f).build()));
 
-    public static final ItemGroup ITEM_GROUP = FabricItemGroupBuilder.build(
+    public static final ItemGroup CHARMS_GROUP = FabricItemGroupBuilder.build(
 		new Identifier("shitmod", "charms"),
 		() -> new ItemStack(Shitmod.KINGSOUL_CHARM));
     
-    public static final Item KINGSOUL_CHARM = new kingsoul(new Item.Settings().group(ItemGroup.MISC));
+    public static final Item KINGSOUL_CHARM = new kingsoul(new Item.Settings().group(Shitmod.CHARMS_GROUP).maxDamage(500));
 
     public static final StatusEffect KINGSOUL_CHARM_EFFECT = new kingsoulEffect();
+
+    public static final Item STALWART_SHELL_CHARM = new stalwartShell(new Item.Settings().group(Shitmod.CHARMS_GROUP).maxDamage(500));
     
     @Override
     public void onInitialize() {
@@ -64,6 +66,8 @@ public class Shitmod implements ModInitializer {
         Registry.register(Registry.ITEM, new Identifier("shitmod", "kingsoul_charm"), KINGSOUL_CHARM);
 
         Registry.register(Registry.STATUS_EFFECT, new Identifier("shitmod", "kingsoul_charm"), KINGSOUL_CHARM_EFFECT);
+
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "stalwart_shell_charm"), STALWART_SHELL_CHARM);
 
         CustomPortalBuilder.beginPortal()  
 .frameBlock(Blocks.DIAMOND_BLOCK)  

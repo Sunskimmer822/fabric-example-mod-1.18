@@ -6,5 +6,7 @@
     "effect.shitmod.lean": "Lean",
     "item.shitmod.lean": "Lean",
     "item.shitmod.orange_juice": "Orange Juice",
-    "item.shitmod.kingsoul_charm": "Kingsoul Charm"
+    "item.shitmod.kingsoul_charm": "Kingsoul Charm",
+    "itemGroup.shitmod.charms": "Charms",
+    "item.shitmod.stalwart_shell_charm": "Stalwart Shell Charm"
 }
