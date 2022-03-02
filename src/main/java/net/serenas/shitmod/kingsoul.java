@@ -14,18 +14,12 @@ public class kingsoul extends Item {
         super(settings);
 
     }
-    Boolean kingSoulActive = false;
     
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity PlayerEntity, Hand hand) {
     
+        PlayerEntity.getHungerManager().add(1, 1);
 
-    if (kingSoulActive == true) {
-        kingSoulActive = false;
-    } else if (kingSoulActive == false) {
-        kingSoulActive = true;
-    }
-    
     return new TypedActionResult<ItemStack>(ActionResult.SUCCESS, PlayerEntity.getStackInHand(hand));
     
     }
