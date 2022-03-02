@@ -1,5 +1,7 @@
 package net.serenas.shitmod;
 
+import java.io.Console;
+
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
@@ -16,9 +18,11 @@ public class kingsoul extends Item {
         super(settings);
 
     }
+
+    
     @Override
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity playerentity, Hand hand) {
-    boolean kingSoulActive = false;
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity PlayerEntity, Hand hand) {
+    boolean kingSoulActive;
 
     if (kingSoulActive == true) {
         kingSoulActive = false;
@@ -26,13 +30,14 @@ public class kingsoul extends Item {
         kingSoulActive = true;
     }
     
-    return new TypedActionResult<ItemStack>(ActionResult.SUCCESS, playerentity.getStackInHand(hand));
+    return new TypedActionResult<ItemStack>(ActionResult.SUCCESS, PlayerEntity.getStackInHand(hand));
     
     }
-    @Override
-    public void 
+
+
+
     if (kingSoulActive == true) {
-        return new kingsoulEffect();
+        new kingsoulEffect();
     } 
 }
 
