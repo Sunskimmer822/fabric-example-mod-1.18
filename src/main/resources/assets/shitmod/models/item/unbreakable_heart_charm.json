@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "shitmod:item/unbreakable_heart_charm"
+    }
+}

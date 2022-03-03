@@ -39,11 +39,19 @@ public class Shitmod implements ModInitializer {
 		new Identifier("shitmod", "charms"),
 		() -> new ItemStack(Shitmod.KINGSOUL_CHARM));
     
-    public static final Item KINGSOUL_CHARM = new kingsoul(new Item.Settings().group(Shitmod.CHARMS_GROUP).maxDamage(500));
+    public static final Item KINGSOUL_CHARM = new kingsoul(new Item.Settings().group(Shitmod.CHARMS_GROUP).maxDamage(500).fireproof());
 
     public static final StatusEffect KINGSOUL_CHARM_EFFECT = new kingsoulEffect();
 
-    public static final Item STALWART_SHELL_CHARM = new stalwartShell(new Item.Settings().group(Shitmod.CHARMS_GROUP).maxDamage(500));
+    public static final Item STALWART_SHELL_CHARM = new stalwartShell(new Item.Settings().group(Shitmod.CHARMS_GROUP).maxDamage(500).fireproof());
+
+    public static final Item FRAGILE_HEART_CHARM = new fragileHeartCharm(new Item.Settings().group(Shitmod.CHARMS_GROUP).maxDamage(100).fireproof());
+
+    public static final Item UNBREAKABLE_HEART_CHARM = new unbreakableHeartCharm(new Item.Settings().group(Shitmod.CHARMS_GROUP).fireproof().maxCount(1));
+
+    public static final Item FRAGILE_STRENGTH_CHARM =  new fragileStrengthCharm(new Item.Settings().group(Shitmod.CHARMS_GROUP).maxDamage(100).fireproof());
+
+    public static final Item UNBREAKABLE_STRENGTH_CHARM = new unbreakableStrengthCharm(new Item.Settings().group(Shitmod.CHARMS_GROUP).fireproof().maxCount(1));
     
     @Override
     public void onInitialize() {
@@ -68,6 +76,14 @@ public class Shitmod implements ModInitializer {
         Registry.register(Registry.STATUS_EFFECT, new Identifier("shitmod", "kingsoul_charm"), KINGSOUL_CHARM_EFFECT);
 
         Registry.register(Registry.ITEM, new Identifier("shitmod", "stalwart_shell_charm"), STALWART_SHELL_CHARM);
+
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "fragile_heart_charm"), FRAGILE_HEART_CHARM);
+
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "unbreakable_heart_charm"), UNBREAKABLE_HEART_CHARM);
+
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "fragile_strength_charm"), FRAGILE_STRENGTH_CHARM);
+
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "unbreakable_strength_charm"), UNBREAKABLE_STRENGTH_CHARM);
 
         CustomPortalBuilder.beginPortal()  
 .frameBlock(Blocks.DIAMOND_BLOCK)  
