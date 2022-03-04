@@ -19,7 +19,7 @@ public class kingsoul extends Item {
 
     }
     
-    public int availableSlots = 2;
+    public int availableSlots = 10;
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity PlayerEntity, Hand hand) {
@@ -34,7 +34,7 @@ public class kingsoul extends Item {
         }
         availableSlots++;
 
-    } else if (availableSlots < 0) {
+    } else if (availableSlots < 1) {
         PlayerEntity.sendMessage(new LiteralText("You don't have enough charm notches to do that!"), true);
     }
         
