@@ -1,7 +1,5 @@
 package net.serenas.shitmod;
 
-import java.util.concurrent.TimeUnit;
-
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
@@ -26,13 +24,8 @@ public class unbreakableHeartCharm extends Item {
 
         if (availableSlots > 0) {
             availableSlots--;
-            PlayerEntity.sendMessage(new LiteralText("You have " + availableSlots + "charm notches left."), false);
+            PlayerEntity.sendMessage(new LiteralText("You have " + availableSlots + " charm notches left."), false);
             PlayerEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.HEALTH_BOOST, 20*1000000, 4));
-            try {
-                TimeUnit.SECONDS.sleep(5);
-            } catch (InterruptedException e1) {
-                e1.printStackTrace();
-            }
             availableSlots++;
     
         } else if (availableSlots < 1) {

@@ -1,8 +1,5 @@
 package net.serenas.shitmod;
 
-
-import java.util.concurrent.TimeUnit;
-
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -30,11 +27,6 @@ public class stalwartShell extends Item{
             PlayerEntity.sendMessage(new LiteralText("You have " + availableSlots + "charm notches left."), false);
             PlayerEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 20, 5));
             PlayerEntity.getMainHandStack().damage(1,PlayerEntity,e-> e.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND));
-            try {
-                TimeUnit.SECONDS.sleep(15);
-            } catch (InterruptedException e1) {
-                e1.printStackTrace();
-            }
             availableSlots++;
     
         } else if (availableSlots < 1) {

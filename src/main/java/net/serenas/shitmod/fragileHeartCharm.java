@@ -8,9 +8,6 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
-
-import java.util.concurrent.TimeUnit;
-
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -31,11 +28,6 @@ public class fragileHeartCharm extends Item {
             Playerentity.sendMessage(new LiteralText("You have " + availableSlots + "charm notches left."), false);
             Playerentity.addStatusEffect(new StatusEffectInstance(StatusEffects.HEALTH_BOOST, 20*1000000, 2));
             Playerentity.getMainHandStack().damage(50,Playerentity,e-> e.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND));
-            try {
-                TimeUnit.SECONDS.sleep(100);
-            } catch (InterruptedException e1) {
-                e1.printStackTrace();
-            }
             availableSlots++;
     
         } else if (availableSlots < 1) {

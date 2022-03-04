@@ -1,5 +1,7 @@
 package net.serenas.shitmod;
 
+import java.util.concurrent.TimeUnit;
+
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -17,6 +19,11 @@ public class totemOfEquivalency extends Item {
     @Override
     public TypedActionResult<ItemStack> use(World World, PlayerEntity PlayerEntity, Hand Hand) {
         PlayerEntity.kill();
+        try {
+            TimeUnit.SECONDS.sleep(10);
+        } catch (InterruptedException e1) {
+            e1.printStackTrace();
+        }
         return new TypedActionResult<ItemStack>(ActionResult.SUCCESS, PlayerEntity.getStackInHand(Hand));
     }
 }
