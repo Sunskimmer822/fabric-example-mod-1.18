@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "   ",
+      "XRW",
+      "   "
+    ],
+    "key": {
+      "X": {
+        "item": "shitmod:kingsoul_left_fragment"
+      },
+      "R": {
+        "item": "minecraft:iron_block"
+      },
+      "W": {
+        "item": "shitmod:kingsoul_right_fragment"
+      }
+    },
+    "result": {
+      "item": "shitmod:kingsoul_charm",
+      "count": 1
+    }
+  }

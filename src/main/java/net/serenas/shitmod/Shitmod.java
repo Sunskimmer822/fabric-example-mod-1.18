@@ -59,6 +59,12 @@ public class Shitmod implements ModInitializer {
     
     public static final Item TOTEM_OF_EQUIVALENCY = new totemOfEquivalency(new Item.Settings().group(Shitmod.GENERAL_GROUP).maxCount(1));
 
+    public static final Item ROCK_WITH_A_STRING_TIED_AROUND = new rockWithAStringAround(new Item.Settings().group(Shitmod.GENERAL_GROUP).maxCount(1));
+
+    public static final Item KINGSOUL_LEFT = new kingsoulLeft(new Item.Settings().group(Shitmod.CHARMS_GROUP).maxCount(1));
+
+    public static final Item KINGSOUL_RIGHT = new kingsoulRight(new Item.Settings().group(Shitmod.CHARMS_GROUP).maxCount(1));
+
     @Override
     public void onInitialize() {
 
@@ -92,6 +98,12 @@ public class Shitmod implements ModInitializer {
         Registry.register(Registry.ITEM, new Identifier("shitmod", "unbreakable_strength_charm"), UNBREAKABLE_STRENGTH_CHARM);
 
         Registry.register(Registry.ITEM, new Identifier("shitmod", "totem_of_equivalency"), TOTEM_OF_EQUIVALENCY);
+
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "rock_with_string"), ROCK_WITH_A_STRING_TIED_AROUND);
+
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "kingsoul_left_fragment"), KINGSOUL_LEFT);
+
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "kingsoul_right_fragment"), KINGSOUL_RIGHT);
 
         CustomPortalBuilder.beginPortal()  
 .frameBlock(Blocks.DIAMOND_BLOCK)  
