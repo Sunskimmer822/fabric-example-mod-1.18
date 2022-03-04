@@ -25,6 +25,7 @@ public class kingsoul extends Item {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity PlayerEntity, Hand hand) {
     if (availableSlots > 0) {
         availableSlots--;
+        PlayerEntity.sendMessage(new LiteralText("You have " + availableSlots + "charm notches left."), false);
         PlayerEntity.getHungerManager().add(1, 1);
         PlayerEntity.getMainHandStack().damage(1,PlayerEntity,e-> e.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND));
         try {

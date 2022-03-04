@@ -28,6 +28,7 @@ public class fragileHeartCharm extends Item {
         
         if (availableSlots > 0) {
             availableSlots--;
+            Playerentity.sendMessage(new LiteralText("You have " + availableSlots + "charm notches left."), false);
             Playerentity.addStatusEffect(new StatusEffectInstance(StatusEffects.HEALTH_BOOST, 20*1000000, 2));
             Playerentity.getMainHandStack().damage(50,Playerentity,e-> e.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND));
             try {

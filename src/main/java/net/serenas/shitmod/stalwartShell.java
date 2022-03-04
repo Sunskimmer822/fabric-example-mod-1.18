@@ -27,6 +27,7 @@ public class stalwartShell extends Item{
     public TypedActionResult<ItemStack> use(World world, PlayerEntity PlayerEntity, Hand hand) {
         if (availableSlots > 0) {
             availableSlots--;
+            PlayerEntity.sendMessage(new LiteralText("You have " + availableSlots + "charm notches left."), false);
             PlayerEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 20, 5));
             PlayerEntity.getMainHandStack().damage(1,PlayerEntity,e-> e.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND));
             try {
