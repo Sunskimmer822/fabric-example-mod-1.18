@@ -20,7 +20,7 @@ public class totemOfEquivalency extends Item {
     public TypedActionResult<ItemStack> use(World World, PlayerEntity PlayerEntity, Hand Hand) {
         PlayerEntity.kill();
         try {
-            TimeUnit.SECONDS.sleep(10);
+            TimeUnit.SECONDS.sleep(100);
         } catch (InterruptedException e1) {
             e1.printStackTrace();
         }
