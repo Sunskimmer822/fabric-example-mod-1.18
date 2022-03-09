@@ -15,6 +15,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.item.ShovelItem;
+import net.minecraft.item.SwordItem;
+import net.minecraft.item.ToolItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
@@ -42,6 +45,10 @@ public class Shitmod implements ModInitializer {
     public static final ItemGroup GENERAL_GROUP = FabricItemGroupBuilder.build(
       new Identifier("shitmod", "general"),
       () -> new ItemStack(Shitmod.FABRIC_ITEM));
+
+    public static final ItemGroup TOOLS_GROUP = FabricItemGroupBuilder.build(
+      new Identifier("shitmod", "tools"), 
+      () -> new ItemStack(Shitmod.BLAZE_METAL_SHOVEL));
     
     public static final Item KINGSOUL_CHARM = new kingsoul(new Item.Settings().group(Shitmod.CHARMS_GROUP).maxDamage(500).fireproof());
 
@@ -64,6 +71,16 @@ public class Shitmod implements ModInitializer {
     public static final Item KINGSOUL_LEFT = new kingsoulLeft(new Item.Settings().group(Shitmod.CHARMS_GROUP).maxCount(1));
 
     public static final Item KINGSOUL_RIGHT = new kingsoulRight(new Item.Settings().group(Shitmod.CHARMS_GROUP).maxCount(1));
+
+    public static final ToolItem BLAZE_METAL_SWORD = new SwordItem(blazeMetalMaterial.INSTANCE, 5, 3f, new Item.Settings().group(Shitmod.TOOLS_GROUP));
+
+    public static final ToolItem BLAZE_METAL_PICKAXE = new blazeMetalPickaxe(blazeMetalMaterial.INSTANCE, 1, -0.5f, new Item.Settings().group(Shitmod.TOOLS_GROUP));
+
+    public static final ToolItem BLAZE_METAL_AXE = new blazeMetalAxe(blazeMetalMaterial.INSTANCE, 8.0f, -1.0f, new Item.Settings().group(Shitmod.TOOLS_GROUP));
+
+    public static final ToolItem BLAZE_METAL_SHOVEL = new ShovelItem(blazeMetalMaterial.INSTANCE, 1f, 3.0f, new Item.Settings().group(Shitmod.TOOLS_GROUP));
+
+    public static final ToolItem BLAZE_METAL_HOE = new blazeMetalHoe(blazeMetalMaterial.INSTANCE, new Item.Settings().group(Shitmod.TOOLS_GROUP));
 
     @Override
     public void onInitialize() {
@@ -104,6 +121,16 @@ public class Shitmod implements ModInitializer {
         Registry.register(Registry.ITEM, new Identifier("shitmod", "kingsoul_left_fragment"), KINGSOUL_LEFT);
 
         Registry.register(Registry.ITEM, new Identifier("shitmod", "kingsoul_right_fragment"), KINGSOUL_RIGHT);
+
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "blaze_metal_sword"), BLAZE_METAL_SWORD);
+
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "blaze_metal_pickaxe"), BLAZE_METAL_PICKAXE);
+
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "blaze_metal_axe"), BLAZE_METAL_AXE);
+
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "blaze_metal_shovel"), BLAZE_METAL_SHOVEL);
+
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "blaze_metal_hoe"), BLAZE_METAL_HOE);
 
         CustomPortalBuilder.beginPortal()  
 .frameBlock(Blocks.DIAMOND_BLOCK)  
