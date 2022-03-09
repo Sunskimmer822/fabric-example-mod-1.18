@@ -82,6 +82,8 @@ public class Shitmod implements ModInitializer {
 
     public static final ToolItem BLAZE_METAL_HOE = new blazeMetalHoe(blazeMetalMaterial.INSTANCE, new Item.Settings().group(Shitmod.TOOLS_GROUP));
 
+    public static final Item BLAZE_METAL_INGOT = new blazeMetalIngot(new Item.Settings().group(Shitmod.GENERAL_GROUP));
+
     @Override
     public void onInitialize() {
 
@@ -132,9 +134,11 @@ public class Shitmod implements ModInitializer {
 
         Registry.register(Registry.ITEM, new Identifier("shitmod", "blaze_metal_hoe"), BLAZE_METAL_HOE);
 
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "blaze_metal_ingot"), BLAZE_METAL_INGOT);
+
         CustomPortalBuilder.beginPortal()  
-.frameBlock(Blocks.DIAMOND_BLOCK)  
-.lightWithItem(Items.ENDER_EYE)  
+.frameBlock(Shitmod.FABRIC_BLOCK)  
+.lightWithItem(Shitmod.BLAZE_METAL_INGOT)  
 .destDimID(new Identifier("the_end"))  
 .tintColor(45,65,101)  
 .registerPortal();
