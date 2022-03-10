@@ -25,13 +25,13 @@ public class LeanStatusEffect extends StatusEffect{
       @Override
       public void applyUpdateEffect(LivingEntity entity, int amplifier) {
         if (entity instanceof PlayerEntity) {
-          ((PlayerEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS));
-          ((PlayerEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS));
-          ((PlayerEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS));
-          ((PlayerEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.POISON));
-          ((PlayerEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA));
-          ((PlayerEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.GLOWING));
-          ((PlayerEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.MINING_FATIGUE));
+          ((PlayerEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 1, amplifier));
+          ((PlayerEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 1, amplifier));
+          ((PlayerEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 1, amplifier));
+          ((PlayerEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 1, amplifier));
+          ((PlayerEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 1, amplifier));
+          ((PlayerEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 1, amplifier));
+          ((PlayerEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.MINING_FATIGUE, 1, amplifier));
         }
       }
 }

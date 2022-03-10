@@ -8,5 +8,6 @@
     "item.shitmod.orange_juice": "Orange Juice",
     "item.shitmod.kingsoul_charm": "Kingsoul Charm",
     "itemGroup.shitmod.charms": "Charms",
-    "item.shitmod.stalwart_shell_charm": "Stalwart Shell Charm"
+    "item.shitmod.stalwart_shell_charm": "Stalwart Shell Charm",
+    "entity.minecraft.mooshroom": "Drug Cow"
 }
