@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
 import net.minecraft.block.Block;
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -82,6 +83,8 @@ public class Shitmod implements ModInitializer {
 
     public static final Item BLAZE_METAL_INGOT = new blazeMetalIngot(new Item.Settings().group(Shitmod.GENERAL_GROUP));
 
+    public static final Enchantment EXPLOSION_ASPECT = new explosionAspectEnchantment();
+
     @Override
     public void onInitialize() {
 
@@ -133,6 +136,8 @@ public class Shitmod implements ModInitializer {
         Registry.register(Registry.ITEM, new Identifier("shitmod", "blaze_metal_hoe"), BLAZE_METAL_HOE);
 
         Registry.register(Registry.ITEM, new Identifier("shitmod", "blaze_metal_ingot"), BLAZE_METAL_INGOT);
+
+        Registry.register(Registry.ENCHANTMENT, new Identifier("shitmod", "explosion_aspect"), EXPLOSION_ASPECT);
 
         CustomPortalBuilder.beginPortal()  
 .frameBlock(Shitmod.FABRIC_BLOCK)  
