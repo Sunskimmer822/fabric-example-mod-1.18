@@ -1,6 +1,5 @@
 # Build
 
-Finally, build it with
 linux: ./gradlew build
 windows: .\gradlew build
 
