@@ -15,7 +15,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ShovelItem;
-import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
@@ -23,11 +22,11 @@ import net.minecraft.util.registry.Registry;
 
 public class Shitmod implements ModInitializer {
 
-    public static final Item FABRIC_ITEM = new FabricItem(new Item.Settings().group(ItemGroup.MISC));
+    public static final Item FABRIC_ITEM = new FabricItem(new Item.Settings().group(Shitmod.GENERAL_GROUP));
 
     public static final Block FABRIC_BLOCK = new FabricBlock();
 
-    public static final Item HAUSBOMMER_ITEM = new Hausbommer(new Item.Settings().group(ItemGroup.MISC));
+    public static final Item HAUSBOMMER_ITEM = new Hausbommer(new Item.Settings().group(Shitmod.GENERAL_GROUP));
 
     public static final StatusEffect LEAN_EFFECT = new LeanStatusEffect();
 
@@ -71,7 +70,7 @@ public class Shitmod implements ModInitializer {
 
     public static final Item KINGSOUL_RIGHT = new kingsoulRight(new Item.Settings().group(Shitmod.CHARMS_GROUP).maxCount(1));
 
-    public static final ToolItem BLAZE_METAL_SWORD = new SwordItem(blazeMetalMaterial.INSTANCE, 5, 3f, new Item.Settings().group(Shitmod.TOOLS_GROUP));
+    public static final ToolItem BLAZE_METAL_SWORD = new blazeMetalSword(blazeMetalMaterial.INSTANCE, 5, 3f, new Item.Settings().group(Shitmod.TOOLS_GROUP));
 
     public static final ToolItem BLAZE_METAL_PICKAXE = new blazeMetalPickaxe(blazeMetalMaterial.INSTANCE, 1, -0.5f, new Item.Settings().group(Shitmod.TOOLS_GROUP));
 
