@@ -22,7 +22,7 @@ public class explosionAspectEnchantment extends Enchantment {
 
     @Override
     public int getMaxLevel() {
-        return 1;
+        return 5;
     }
 
     @Override
@@ -30,7 +30,7 @@ public class explosionAspectEnchantment extends Enchantment {
         World world = user.world;
         if (target instanceof LivingEntity) {
             Vec3d pos = target.getPos();
-            world.createExplosion(user, pos.x, pos.y, pos.z, 4.0F, Explosion.DestructionType.BREAK);
+            world.createExplosion(user, pos.x, pos.y, pos.z, level * 4.0F, Explosion.DestructionType.BREAK);
         }
         super.onTargetDamaged(user, target, level);
     }

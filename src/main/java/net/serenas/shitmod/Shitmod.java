@@ -24,6 +24,18 @@ import net.minecraft.util.registry.Registry;
 
 public class Shitmod implements ModInitializer {
 
+  public static final ItemGroup CHARMS_GROUP = FabricItemGroupBuilder.build(
+		new Identifier("shitmod", "charms"),
+		() -> new ItemStack(Shitmod.KINGSOUL_CHARM));
+
+    public static final ItemGroup GENERAL_GROUP = FabricItemGroupBuilder.build(
+      new Identifier("shitmod", "general"),
+      () -> new ItemStack(Shitmod.FABRIC_ITEM));
+
+    public static final ItemGroup TOOLS_GROUP = FabricItemGroupBuilder.build(
+      new Identifier("shitmod", "tools"), 
+      () -> new ItemStack(Shitmod.BLAZE_METAL_SHOVEL));
+
     public static final Item FABRIC_ITEM = new FabricItem(new Item.Settings().group(Shitmod.GENERAL_GROUP));
 
     public static final Block FABRIC_BLOCK = new FabricBlock();
@@ -37,18 +49,6 @@ public class Shitmod implements ModInitializer {
     public static final StatusEffect EXP = new ExpStatusEffect();
     
     public static final Item ORANGE_JUICE = new OrangeJuice(new Item.Settings().group(ItemGroup.FOOD).rarity(Rarity.EPIC).food(new FoodComponent.Builder().hunger(200).saturationModifier(10f).snack().meat().alwaysEdible().statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 20*120, 5), 1f).statusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 20*120, 20), 1f).statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 20*120), 1f).statusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 20*120, 3), 1f).statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 20*120, 2), 1f).build()));
-
-    public static final ItemGroup CHARMS_GROUP = FabricItemGroupBuilder.build(
-		new Identifier("shitmod", "charms"),
-		() -> new ItemStack(Shitmod.KINGSOUL_CHARM));
-
-    public static final ItemGroup GENERAL_GROUP = FabricItemGroupBuilder.build(
-      new Identifier("shitmod", "general"),
-      () -> new ItemStack(Shitmod.FABRIC_ITEM));
-
-    public static final ItemGroup TOOLS_GROUP = FabricItemGroupBuilder.build(
-      new Identifier("shitmod", "tools"), 
-      () -> new ItemStack(Shitmod.BLAZE_METAL_SHOVEL));
     
     public static final Item KINGSOUL_CHARM = new kingsoul(new Item.Settings().group(Shitmod.CHARMS_GROUP).maxDamage(500).fireproof());
 

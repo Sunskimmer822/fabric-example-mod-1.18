@@ -8,5 +8,4 @@ public class careFreeMelodyEffect extends StatusEffect {
     protected careFreeMelodyEffect(StatusEffectCategory category, int color) {
         super(category, color);
     }
-    
 }
