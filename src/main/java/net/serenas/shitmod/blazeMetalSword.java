@@ -18,9 +18,9 @@ public class blazeMetalSword extends SwordItem {
         super(toolMaterial, attackDamage, attackSpeed, settings);
     }
     
+
     @Override
     public TypedActionResult<ItemStack> use(World World, PlayerEntity PlayerEntity, Hand Hand) {
-    
     Vec3d looking = PlayerEntity.getRotationVector();
     FireballEntity fireball = new FireballEntity(World, PlayerEntity, looking.x, looking.y, looking.z, 5);
     World.spawnEntity(fireball);
