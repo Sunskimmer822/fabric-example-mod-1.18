@@ -24,7 +24,7 @@ public class blazeMetalSword extends SwordItem {
     Vec3d looking = PlayerEntity.getRotationVector();
     FireballEntity fireball = new FireballEntity(World, PlayerEntity, looking.x, looking.y, looking.z, 5);
     World.spawnEntity(fireball);
-    PlayerEntity.getStackInHand(Hand).damage(50,PlayerEntity,e-> e.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND));
+    PlayerEntity.getStackInHand(Hand).damage(100,PlayerEntity,e-> e.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND));
     return new TypedActionResult<ItemStack>(ActionResult.SUCCESS, PlayerEntity.getStackInHand(Hand));
     }
 }

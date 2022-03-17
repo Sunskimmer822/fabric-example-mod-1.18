@@ -6,6 +6,8 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
 import net.minecraft.block.Block;
 import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.EnchantmentTarget;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -70,19 +72,21 @@ public class Shitmod implements ModInitializer {
 
     public static final Item KINGSOUL_RIGHT = new kingsoulRight(new Item.Settings().group(Shitmod.CHARMS_GROUP).maxCount(1));
 
-    public static final ToolItem BLAZE_METAL_SWORD = new blazeMetalSword(blazeMetalMaterial.INSTANCE, 5, 3f, new Item.Settings().group(Shitmod.TOOLS_GROUP));
+    public static final ToolItem BLAZE_METAL_SWORD = new blazeMetalSword(blazeMetalMaterial.INSTANCE, 5, 3f, new Item.Settings().group(Shitmod.TOOLS_GROUP).maxDamage(8000));
 
-    public static final ToolItem BLAZE_METAL_PICKAXE = new blazeMetalPickaxe(blazeMetalMaterial.INSTANCE, 1, -0.5f, new Item.Settings().group(Shitmod.TOOLS_GROUP));
+    public static final ToolItem BLAZE_METAL_PICKAXE = new blazeMetalPickaxe(blazeMetalMaterial.INSTANCE, 1, -0.5f, new Item.Settings().group(Shitmod.TOOLS_GROUP).maxDamage(8000));
 
-    public static final ToolItem BLAZE_METAL_AXE = new blazeMetalAxe(blazeMetalMaterial.INSTANCE, 8.0f, -1.0f, new Item.Settings().group(Shitmod.TOOLS_GROUP));
+    public static final ToolItem BLAZE_METAL_AXE = new blazeMetalAxe(blazeMetalMaterial.INSTANCE, 8.0f, -1.0f, new Item.Settings().group(Shitmod.TOOLS_GROUP).maxDamage(8000));
 
-    public static final ToolItem BLAZE_METAL_SHOVEL = new ShovelItem(blazeMetalMaterial.INSTANCE, 1f, 3.0f, new Item.Settings().group(Shitmod.TOOLS_GROUP));
+    public static final ToolItem BLAZE_METAL_SHOVEL = new ShovelItem(blazeMetalMaterial.INSTANCE, 1f, 3.0f, new Item.Settings().group(Shitmod.TOOLS_GROUP).maxDamage(8000));
 
-    public static final ToolItem BLAZE_METAL_HOE = new blazeMetalHoe(blazeMetalMaterial.INSTANCE, new Item.Settings().group(Shitmod.TOOLS_GROUP));
+    public static final ToolItem BLAZE_METAL_HOE = new blazeMetalHoe(blazeMetalMaterial.INSTANCE, new Item.Settings().group(Shitmod.TOOLS_GROUP).maxDamage(8000));
 
     public static final Item BLAZE_METAL_INGOT = new blazeMetalIngot(new Item.Settings().group(Shitmod.GENERAL_GROUP));
 
     public static final Enchantment EXPLOSION_ASPECT = new explosionAspectEnchantment();
+
+    public static final Enchantment EXPLOSIVE_THORNS = new explosiveThornsEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.WEARABLE, new EquipmentSlot[] {EquipmentSlot.HEAD, EquipmentSlot.CHEST, EquipmentSlot.LEGS, EquipmentSlot.FEET});
 
     @Override
     public void onInitialize() {
@@ -137,6 +141,8 @@ public class Shitmod implements ModInitializer {
         Registry.register(Registry.ITEM, new Identifier("shitmod", "blaze_metal_ingot"), BLAZE_METAL_INGOT);
 
         Registry.register(Registry.ENCHANTMENT, new Identifier("shitmod", "explosion_aspect"), EXPLOSION_ASPECT);
+
+        Registry.register(Registry.ENCHANTMENT, new Identifier("shitmod", "explosive_thorns"), EXPLOSIVE_THORNS);
 
         CustomPortalBuilder.beginPortal()  
 .frameBlock(Shitmod.FABRIC_BLOCK)  
