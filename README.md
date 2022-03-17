@@ -1,17 +1,3 @@
-# Configure workspace
-First: 
-
-Make sure you have JDK 17 installed
-then
-./gradlew genSources
-
-Second:
-
-configure for your IDE
-idk about other IDEs but for vscode:
-on linux run ./gradlew vscode
-on windows run .\gradlew vscode
-
 # Build
 
 Finally, build it with
