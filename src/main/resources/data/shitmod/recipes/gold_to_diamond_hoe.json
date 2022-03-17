@@ -1,0 +1,6 @@
+{
+    "type": "minecraft:smithing",
+    "base": {"item":"minecraft:gold_hoe"},
+    "addition": {"item":"minecraft:diamond"},
+    "result": {"item":"minecraft:diamond_hoe"}
+}
