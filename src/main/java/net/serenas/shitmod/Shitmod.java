@@ -102,6 +102,9 @@ public class Shitmod implements ModInitializer {
     public static final Item BLAZE_METAL_SHOVEL_CASING = new blazeMetalShovelCasing(new Item.Settings().fireproof().group(Shitmod.GENERAL_GROUP));
 
     public static final Item BLAZE_METAL_HOE_CASING = new blazeMetalHoeCasing(new Item.Settings().fireproof().group(Shitmod.GENERAL_GROUP));
+
+    public static final Item POTATO_CHIPS = new potatoChips(new Item.Settings().group(ItemGroup.FOOD));
+
     @Override
     public void onInitialize() {
 
@@ -171,6 +174,8 @@ public class Shitmod implements ModInitializer {
         Registry.register(Registry.ITEM, new Identifier("shitmod", "blaze_metal_shovel_casing"), BLAZE_METAL_SHOVEL_CASING);
 
         Registry.register(Registry.ITEM, new Identifier("shitmod", "blaze_metal_hoe_casing"), BLAZE_METAL_HOE_CASING);
+
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "potato_chip"), POTATO_CHIPS);
 
         CustomPortalBuilder.beginPortal()  
 .frameBlock(Shitmod.FABRIC_BLOCK)  
