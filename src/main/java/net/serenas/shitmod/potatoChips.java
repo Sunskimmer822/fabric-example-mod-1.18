@@ -23,10 +23,10 @@ int potatoChipsConsumed = 0;
     public TypedActionResult<ItemStack> use(World World, PlayerEntity PlayerEntity, Hand Hand) {
     PlayerEntity.getHungerManager().add(1, 10f);
     PlayerEntity.getStackInHand(Hand).decrement(1);
-    potatoChipsConsumed++;
+    potatoChipsConsumed+=1;
     if (potatoChipsConsumed == 69) {
         PlayerEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 20 * 15, 4));
-        potatoChipsConsumed -= 69;
+        potatoChipsConsumed = 0;
         PlayerEntity.sendMessage(new LiteralText("I'm really fat/test"), false);
         System.out.println("I'm really fat\n/test");
     }
