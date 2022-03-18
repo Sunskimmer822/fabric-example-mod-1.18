@@ -91,6 +91,17 @@ public class Shitmod implements ModInitializer {
 
     public static final Enchantment EXPLOSIVE_THORNS = new explosiveThornsEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.WEARABLE, new EquipmentSlot[] {EquipmentSlot.HEAD, EquipmentSlot.CHEST, EquipmentSlot.LEGS, EquipmentSlot.FEET});
 
+    public static final Item REINFORCED_BLAZE_METAL_INGOT = new reinforcedBlazeMetalIngot(new Item.Settings().fireproof().group(Shitmod.GENERAL_GROUP));
+
+    public static final Item BLAZE_METAL_SWORD_CASING = new blazeMetalSwordCasing(new Item.Settings().fireproof().group(Shitmod.GENERAL_GROUP));
+
+    public static final Item BLAZE_METAL_PICKAXE_CASING = new blazeMetalPickaxeCasing(new Item.Settings().fireproof().group(Shitmod.GENERAL_GROUP));
+
+    public static final Item BLAZE_METAL_AXE_CASING = new blazeMetalAxeCasing(new Item.Settings().fireproof().group(Shitmod.GENERAL_GROUP));
+
+    public static final Item BLAZE_METAL_SHOVEL_CASING = new blazeMetalShovelCasing(new Item.Settings().fireproof().group(Shitmod.GENERAL_GROUP));
+
+    public static final Item BLAZE_METAL_HOE_CASING = new blazeMetalHoeCasing(new Item.Settings().fireproof().group(Shitmod.GENERAL_GROUP));
     @Override
     public void onInitialize() {
 
@@ -148,6 +159,18 @@ public class Shitmod implements ModInitializer {
         Registry.register(Registry.ENCHANTMENT, new Identifier("shitmod", "explosion_aspect"), EXPLOSION_ASPECT);
 
         Registry.register(Registry.ENCHANTMENT, new Identifier("shitmod", "explosive_thorns"), EXPLOSIVE_THORNS);
+
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "reinforced_blaze_metal_ingot"), REINFORCED_BLAZE_METAL_INGOT);
+
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "blaze_metal_sword_casing"), BLAZE_METAL_SWORD_CASING);
+
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "blaze_metal_pickaxe_casing"), BLAZE_METAL_PICKAXE_CASING);
+
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "blaze_metal_axe_casing"), BLAZE_METAL_AXE_CASING);
+
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "blaze_metal_shovel_casing"), BLAZE_METAL_SHOVEL_CASING);
+
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "blaze_metal_hoe_casing"), BLAZE_METAL_HOE_CASING);
 
         CustomPortalBuilder.beginPortal()  
 .frameBlock(Shitmod.FABRIC_BLOCK)  
