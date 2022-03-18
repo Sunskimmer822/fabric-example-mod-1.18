@@ -1,5 +1,6 @@
 package net.serenas.shitmod;
 
+import me.lortseam.completeconfig.data.Config;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -35,6 +36,8 @@ public class Shitmod implements ModInitializer {
     public static final ItemGroup TOOLS_GROUP = FabricItemGroupBuilder.build(
       new Identifier("shitmod", "tools"), 
       () -> new ItemStack(Shitmod.BLAZE_METAL_SHOVEL));
+
+    public static final Config config = new Config("shitmod", new MyContainer(), new configGroup());
 
     public static final Item FABRIC_ITEM = new FabricItem(new Item.Settings().group(Shitmod.GENERAL_GROUP));
 
@@ -90,6 +93,8 @@ public class Shitmod implements ModInitializer {
 
     @Override
     public void onInitialize() {
+
+        config.load();
 
         Registry.register(Registry.ITEM, new Identifier("shitmod", "fabric_item"), FABRIC_ITEM);
 

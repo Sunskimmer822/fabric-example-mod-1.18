@@ -17,7 +17,6 @@ public class blazeMetalSword extends SwordItem {
     public blazeMetalSword(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
         super(toolMaterial, attackDamage, attackSpeed, settings);
     }
-    
 
     @Override
     public TypedActionResult<ItemStack> use(World World, PlayerEntity PlayerEntity, Hand Hand) {

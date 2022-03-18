@@ -14,7 +14,7 @@ public class explosionAspectEnchantment extends Enchantment {
         super(Enchantment.Rarity.RARE, EnchantmentTarget.WEAPON, new EquipmentSlot[] {EquipmentSlot.MAINHAND});
 
     }
-
+    
     @Override
     public int getMinPower(int level) {
         return 100;
