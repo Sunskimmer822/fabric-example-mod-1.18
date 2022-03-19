@@ -2,5 +2,5 @@
     "type": "minecraft:smithing",
     "base": {"item":"minecraft:stone_pickaxe"},
     "addition": {"item":"minecraft:gold_ingot"},
-    "result": {"item":"minecraft:gold_pickaxe"}
+    "result": {"item":"minecraft:golden_pickaxe"}
 }

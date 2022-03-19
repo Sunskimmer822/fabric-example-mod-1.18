@@ -2,5 +2,5 @@
     "type": "minecraft:smithing",
     "base": {"item":"minecraft:stone_sword"},
     "addition": {"item":"minecraft:gold_ingot"},
-    "result": {"item":"minecraft:gold_sword"}
+    "result": {"item":"minecraft:golden_sword"}
 }

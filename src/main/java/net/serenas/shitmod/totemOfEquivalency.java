@@ -15,7 +15,8 @@ public class totemOfEquivalency extends Item {
     public totemOfEquivalency(Settings settings) {
         super(settings);
     }
-    
+
+
     @Override
     public TypedActionResult<ItemStack> use(World World, PlayerEntity PlayerEntity, Hand Hand) {
         PlayerEntity.kill();

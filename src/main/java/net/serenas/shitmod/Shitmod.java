@@ -103,7 +103,13 @@ public class Shitmod implements ModInitializer {
 
     public static final Item BLAZE_METAL_HOE_CASING = new blazeMetalHoeCasing(new Item.Settings().fireproof().group(Shitmod.GENERAL_GROUP));
 
-    public static final Item POTATO_CHIPS = new potatoChips(new Item.Settings().group(ItemGroup.FOOD));
+    public static final Item POTATO_CHIPS = new potatoChips(new Item.Settings().group(ItemGroup.FOOD).maxCount(69));
+
+    public static final Item PULVERIZED_BLAZE_METAL = new pulverizedBlazeMetal(new Item.Settings().fireproof().group(Shitmod.GENERAL_GROUP));
+
+    public static final Item SEARED_GOLD_INGOT = new searedGoldIngot(new Item.Settings().fireproof().group(Shitmod.GENERAL_GROUP));
+
+    public static final Item PULVERIZED_NETHERITE = new pulverizedNetherite(new Item.Settings().fireproof().group(Shitmod.GENERAL_GROUP));
 
     @Override
     public void onInitialize() {
@@ -176,6 +182,12 @@ public class Shitmod implements ModInitializer {
         Registry.register(Registry.ITEM, new Identifier("shitmod", "blaze_metal_hoe_casing"), BLAZE_METAL_HOE_CASING);
 
         Registry.register(Registry.ITEM, new Identifier("shitmod", "potato_chip"), POTATO_CHIPS);
+
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "pulverized_blaze_metal"), PULVERIZED_BLAZE_METAL);
+
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "pulverized_netherite"), PULVERIZED_NETHERITE);
+
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "seared_gold_ingot"), SEARED_GOLD_INGOT);
 
         CustomPortalBuilder.beginPortal()  
 .frameBlock(Shitmod.FABRIC_BLOCK)  

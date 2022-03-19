@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "shitmod:blaze_metal_ingot"
+        },
+        {
+            "item": "shitmod:blaze_metal_ingot"
+        },
+        {
+            "item": "shitmod:blaze_metal_ingot"
+        },
+        {
+            "item": "shitmod:blaze_metal_ingot"
+        },
+        {
+            "item": "shitmod:pulverized_blaze_metal"
+        }
+    ],
+    "result": {
+        "item": "shitmod:reinforced_blaze_metal_ingot",
+        "count": 1
+    }
+}

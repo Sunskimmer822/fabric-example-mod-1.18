@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "RX ",
+      "   ",
+      "   "
+    ],
+    "key": {
+      "X": {
+        "item": "shitmod:pulverized_netherite"
+      },
+      "R": {
+        "item": "shitmod:seared_gold_ingot"
+      }
+    },
+    "result": {
+      "item": "shitmod:pulverized_blaze_metal",
+      "count": 1
+    }
+  }

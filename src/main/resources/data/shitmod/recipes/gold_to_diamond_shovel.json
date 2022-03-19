@@ -1,6 +1,6 @@
 {
     "type": "minecraft:smithing",
-    "base": {"item":"minecraft:gold_shovel"},
+    "base": {"item":"minecraft:golden_shovel"},
     "addition": {"item":"minecraft:diamond"},
     "result": {"item":"minecraft:diamond_shovel"}
 }

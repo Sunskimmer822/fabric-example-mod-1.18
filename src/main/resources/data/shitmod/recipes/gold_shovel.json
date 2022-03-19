@@ -2,5 +2,5 @@
     "type": "minecraft:smithing",
     "base": {"item":"minecraft:stone_shovel"},
     "addition": {"item":"minecraft:gold_ingot"},
-    "result": {"item":"minecraft:gold_shovel"}
+    "result": {"item":"minecraft:golden_shovel"}
 }

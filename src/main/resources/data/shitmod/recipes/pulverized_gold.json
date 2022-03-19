@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:blasting",
+    "ingredient": {
+        "item": "minecraft:gold_ingot"
+    },
+    "result": "shitmod:seared_gold_ingot",
+    "experience": 0.1,
+    "cookingtime": 200
+}
