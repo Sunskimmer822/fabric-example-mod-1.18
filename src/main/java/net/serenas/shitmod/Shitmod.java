@@ -1,10 +1,8 @@
 package net.serenas.shitmod;
 
-import me.lortseam.completeconfig.data.Config;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
 import net.minecraft.block.Block;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
@@ -36,8 +34,6 @@ public class Shitmod implements ModInitializer {
     public static final ItemGroup TOOLS_GROUP = FabricItemGroupBuilder.build(
       new Identifier("shitmod", "tools"), 
       () -> new ItemStack(Shitmod.BLAZE_METAL_SHOVEL));
-
-    public static final Config config = new Config("shitmod", new MyContainer(), new configGroup());
 
     public static final Item FABRIC_ITEM = new FabricItem(new Item.Settings().group(Shitmod.GENERAL_GROUP));
 
@@ -114,8 +110,6 @@ public class Shitmod implements ModInitializer {
     @Override
     public void onInitialize() {
 
-        config.load();
-
         Registry.register(Registry.ITEM, new Identifier("shitmod", "fabric_item"), FABRIC_ITEM);
 
         Registry.register(Registry.BLOCK, new Identifier("shitmod", "fabric_block"), FABRIC_BLOCK);
@@ -188,14 +182,6 @@ public class Shitmod implements ModInitializer {
         Registry.register(Registry.ITEM, new Identifier("shitmod", "pulverized_netherite"), PULVERIZED_NETHERITE);
 
         Registry.register(Registry.ITEM, new Identifier("shitmod", "seared_gold_ingot"), SEARED_GOLD_INGOT);
-
-        CustomPortalBuilder.beginPortal()  
-.frameBlock(Shitmod.FABRIC_BLOCK)  
-.lightWithItem(Shitmod.BLAZE_METAL_INGOT)  
-.destDimID(new Identifier("the_end"))  
-.tintColor(45,65,101)  
-.registerPortal();
-
         
     }
     

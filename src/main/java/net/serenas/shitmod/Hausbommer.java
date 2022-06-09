@@ -3,11 +3,9 @@ package net.serenas.shitmod;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.text.LiteralText;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
-import net.minecraft.util.Util;
 import net.minecraft.world.World;
 
 public class Hausbommer extends Item{
@@ -26,7 +24,7 @@ public class Hausbommer extends Item{
         String Ymessage = String.valueOf(yRound);
         String Zmessage = String.valueOf(zRound);
         String fullMessage = "X: " + Xmessage + " Y: " + Ymessage + " Z: " + Zmessage;
-        playerentity.sendSystemMessage(new LiteralText(fullMessage), Util.NIL_UUID);
+        System.out.println(fullMessage);
         return new TypedActionResult<ItemStack>(ActionResult.SUCCESS, playerentity.getStackInHand(hand));
     }
 }
