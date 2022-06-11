@@ -1,3 +1,8 @@
+//Welcome
+//To any dev working on this project, I don't know how 90% of this works, but maybe you do.
+public double hoursSpentOnThisProject = 90
+
+
 package net.serenas.shitmod;
 
 import net.fabricmc.api.ModInitializer;
