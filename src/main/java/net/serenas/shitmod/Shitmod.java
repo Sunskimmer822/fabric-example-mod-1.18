@@ -51,8 +51,6 @@ public class Shitmod implements ModInitializer {
     
     public static final Item KINGSOUL_CHARM = new kingsoul(new Item.Settings().group(Shitmod.CHARMS_GROUP).maxDamage(500).fireproof());
 
-    public static final StatusEffect KINGSOUL_CHARM_EFFECT = new kingsoulEffect();
-
     public static final Item STALWART_SHELL_CHARM = new stalwartShell(new Item.Settings().group(Shitmod.CHARMS_GROUP).maxDamage(500).fireproof());
 
     public static final Item FRAGILE_HEART_CHARM = new fragileHeartCharm(new Item.Settings().group(Shitmod.CHARMS_GROUP).maxDamage(100).fireproof());
@@ -79,7 +77,7 @@ public class Shitmod implements ModInitializer {
 
     public static final ToolItem BLAZE_METAL_SHOVEL = new ShovelItem(blazeMetalMaterial.INSTANCE, 1f, 3.0f, new Item.Settings().group(Shitmod.TOOLS_GROUP).maxDamage(8000));
 
-    public static final ToolItem BLAZE_METAL_HOE = new blazeMetalHoe(blazeMetalMaterial.INSTANCE, new Item.Settings().group(Shitmod.TOOLS_GROUP).maxDamage(8000));
+    public static final ToolItem BLAZE_METAL_HOE = new blazeMetalHoe(blazeMetalMaterial.INSTANCE, -4, 1f, new Item.Settings().group(Shitmod.TOOLS_GROUP).maxDamage(8000));
 
     public static final Item BLAZE_METAL_INGOT = new blazeMetalIngot(new Item.Settings().group(Shitmod.GENERAL_GROUP));
 
@@ -107,12 +105,22 @@ public class Shitmod implements ModInitializer {
 
     public static final Item PULVERIZED_NETHERITE = new pulverizedNetherite(new Item.Settings().fireproof().group(Shitmod.GENERAL_GROUP));
 
+    public static final ToolItem COPPER_SWORD = new copperSword(copperMaterial.INSTANCE, 2, -2.4f, new Item.Settings().group(Shitmod.TOOLS_GROUP).maxDamage(250));
+
+    public static final ToolItem COPPER_PICKAXE = new copperPickaxe(copperMaterial.INSTANCE, 0, -2.8f, new Item.Settings().group(Shitmod.TOOLS_GROUP).maxDamage(250));
+
+    public static final ToolItem COPPER_AXE = new copperAxe(copperMaterial.INSTANCE, 5, -3.1f, new Item.Settings().group(Shitmod.TOOLS_GROUP).maxDamage(250));
+
+    public static final ToolItem COPPER_SHOVEL = new copperShovel(copperMaterial.INSTANCE, 0.5f, -3f, new Item.Settings().group(Shitmod.TOOLS_GROUP).maxDamage(250));
+
+    public static final ToolItem COPPER_HOE = new copperHoe(copperMaterial.INSTANCE, -3, -1f, new Item.Settings().group(Shitmod.TOOLS_GROUP).maxDamage(250));
+
     @Override
     public void onInitialize() {
 
-        Registry.register(Registry.ITEM, new Identifier("shitmod", "fabric_item"), FABRIC_ITEM);
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "pp"), FABRIC_ITEM);
 
-        Registry.register(Registry.BLOCK, new Identifier("shitmod", "fabric_block"), FABRIC_BLOCK);
+        Registry.register(Registry.BLOCK, new Identifier("shitmod", "gay_block"), FABRIC_BLOCK);
         Registry.register(Registry.ITEM, new Identifier("shitmod", "fabric_block"), new BlockItem(FABRIC_BLOCK, new FabricItemSettings().group(ItemGroup.MISC)));
 
         Registry.register(Registry.ITEM, new Identifier("shitmod", "hausbommer"), HAUSBOMMER_ITEM);
@@ -126,8 +134,6 @@ public class Shitmod implements ModInitializer {
         Registry.register(Registry.ITEM, new Identifier("shitmod", "orange_juice"), ORANGE_JUICE);
 
         Registry.register(Registry.ITEM, new Identifier("shitmod", "kingsoul_charm"), KINGSOUL_CHARM);
-
-        Registry.register(Registry.STATUS_EFFECT, new Identifier("shitmod", "kingsoul_charm"), KINGSOUL_CHARM_EFFECT);
 
         Registry.register(Registry.ITEM, new Identifier("shitmod", "stalwart_shell_charm"), STALWART_SHELL_CHARM);
 
@@ -182,6 +188,16 @@ public class Shitmod implements ModInitializer {
         Registry.register(Registry.ITEM, new Identifier("shitmod", "pulverized_netherite"), PULVERIZED_NETHERITE);
 
         Registry.register(Registry.ITEM, new Identifier("shitmod", "seared_gold_ingot"), SEARED_GOLD_INGOT);
+
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "copper_sword"), COPPER_SWORD);
+
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "copper_pickaxe"), COPPER_PICKAXE);
+
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "copper_axe"), COPPER_AXE);
+
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "copper_shovel"), COPPER_SHOVEL);
+
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "copper_hoe"), COPPER_HOE);
         
     }
     

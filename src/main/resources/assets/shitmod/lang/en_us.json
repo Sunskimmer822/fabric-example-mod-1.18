@@ -1,13 +1,13 @@
 {
-    "item.shitmod.fabric_item": "Penis",
-    "block.shitmod.fabric_block": "Gay Block",
+    "item.shitmod.pp": "Penis",
+    "block.shitmod.gay_block": "Gay Block",
     "item.shitmod.hausbommer": "Hausbommer",
     "effect.shitmod.exp": "Experience",
     "effect.shitmod.lean": "Lean",
     "item.shitmod.lean": "Lean",
     "item.shitmod.orange_juice": "Orange Juice",
     "item.shitmod.kingsoul_charm": "Kingsoul Charm",
-    "itemGroup.shitmod.charms": "Charms",
+    "itemGroup.shitmod.charms": "Shitmod Charms",
     "item.shitmod.stalwart_shell_charm": "Stalwart Shell Charm",
     "entity.minecraft.mooshroom": "Drug Cow",
     "item.shitmod.potato_chip": "Potato Chips",
@@ -33,5 +33,12 @@
     "item.shitmod.blaze_metal_pickaxe": "Blaze Metal Pickaxe",
     "item.shitmod.blaze_metal_axe": "Blaze Metal Axe",
     "item.shitmod.blaze_metal_shovel": "Blaze Metal Shovel",
-    "item.shitmod.blaze_metal_hoe": "Blaze Metal Hoe"
+    "item.shitmod.blaze_metal_hoe": "Blaze Metal Hoe",
+    "item.shitmod.copper_sword": "Copper Sword",
+    "item.shitmod.copper_pickaxe": "Copper Pickaxe",
+    "item.shitmod.copper_axe": "Copper Axe",
+    "item.shitmod.copper_shovel": "Copper Shovel",
+    "item.shitmod.copper_hoe": "Copper Hoe",
+    "itemGroup.shitmod.general": "Shitmod Misc",
+    "itemGroup.shitmod.tools": "Shitmod Tools"
 }
