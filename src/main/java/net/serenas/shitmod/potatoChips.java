@@ -26,7 +26,7 @@ int potatoChipsConsumed = 0;
     potatoChipsConsumed+=1;
     if (potatoChipsConsumed == 69) {
         PlayerEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 20 * 15, 4));
-        int potatoChipsConsumed = 0;
+        potatoChipsConsumed-=69;
         PlayerEntity.sendMessage(new LiteralText("I'm really fat/test"), false);
         System.out.println("I'm really fat\n/test");
     }
