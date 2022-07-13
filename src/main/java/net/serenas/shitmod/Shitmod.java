@@ -1,8 +1,3 @@
-//Welcome
-//To any dev working on this project, I don't know how 90% of this works, but maybe you do.
-public double hoursSpentOnThisProject = 90
-
-
 package net.serenas.shitmod;
 
 import net.fabricmc.api.ModInitializer;
@@ -34,13 +29,13 @@ public class Shitmod implements ModInitializer {
 
     public static final ItemGroup GENERAL_GROUP = FabricItemGroupBuilder.build(
       new Identifier("shitmod", "general"),
-      () -> new ItemStack(Shitmod.FABRIC_ITEM));
+      () -> new ItemStack(Shitmod.PP));
 
     public static final ItemGroup TOOLS_GROUP = FabricItemGroupBuilder.build(
       new Identifier("shitmod", "tools"), 
       () -> new ItemStack(Shitmod.BLAZE_METAL_SHOVEL));
 
-    public static final Item FABRIC_ITEM = new FabricItem(new Item.Settings().group(Shitmod.GENERAL_GROUP));
+    public static final Item PP = new FabricItem(new Item.Settings().group(Shitmod.GENERAL_GROUP));
 
     public static final Block FABRIC_BLOCK = new FabricBlock();
 
@@ -123,7 +118,7 @@ public class Shitmod implements ModInitializer {
     @Override
     public void onInitialize() {
 
-        Registry.register(Registry.ITEM, new Identifier("shitmod", "pp"), FABRIC_ITEM);
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "pp"), PP);
 
         Registry.register(Registry.BLOCK, new Identifier("shitmod", "gay_block"), FABRIC_BLOCK);
         Registry.register(Registry.ITEM, new Identifier("shitmod", "fabric_block"), new BlockItem(FABRIC_BLOCK, new FabricItemSettings().group(ItemGroup.MISC)));
