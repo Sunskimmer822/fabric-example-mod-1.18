@@ -11,6 +11,7 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
+import net.minecraft.item.BowItem;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -115,7 +116,7 @@ public class Shitmod implements ModInitializer {
 
     public static final ToolItem COPPER_HOE = new copperHoe(copperMaterial.INSTANCE, -3, -1f, new Item.Settings().group(Shitmod.TOOLS_GROUP).maxDamage(250));
 
-    public static final Item GLOCK = new glock(new Item.Settings().group(Shitmod.TOOLS_GROUP).maxDamage(1000));
+    public static final BowItem GLOCK = new glock(new FabricItemSettings().group(Shitmod.TOOLS_GROUP).maxDamage(1000));
 
     @Override
     public void onInitialize() {
@@ -202,5 +203,7 @@ public class Shitmod implements ModInitializer {
         Registry.register(Registry.ITEM, new Identifier("shitmod", "copper_hoe"), COPPER_HOE);
 
         Registry.register(Registry.ITEM, new Identifier("shitmod", "glock"), GLOCK);
+        
     }
-  }
+    
+}

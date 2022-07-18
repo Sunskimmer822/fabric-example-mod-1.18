@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "BBB",
+      "ITO",
+      "N  "
+    ],
+    "key": {
+      "B": {
+        "item": "minecraft:iron_block"
+      },
+      "I": {
+          "item": "minecraft:iron_ingot"
+      },
+      "T": {
+        "item": "minecraft:tnt"
+      },
+      "N": {
+        "item": "minecraft:netherite_ingot"
+      },
+      "O": {
+        "item": "minecraft:bow"
+      }
+    },
+    "result": {
+      "item": "shitmod:glock",
+      "count": 1
+    }
+  }
