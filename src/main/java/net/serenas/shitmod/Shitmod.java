@@ -1,10 +1,8 @@
 package net.serenas.shitmod;
 
-import me.lortseam.completeconfig.data.Config;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
 import net.minecraft.block.Block;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
@@ -31,15 +29,13 @@ public class Shitmod implements ModInitializer {
 
     public static final ItemGroup GENERAL_GROUP = FabricItemGroupBuilder.build(
       new Identifier("shitmod", "general"),
-      () -> new ItemStack(Shitmod.FABRIC_ITEM));
+      () -> new ItemStack(Shitmod.PP));
 
     public static final ItemGroup TOOLS_GROUP = FabricItemGroupBuilder.build(
       new Identifier("shitmod", "tools"), 
       () -> new ItemStack(Shitmod.BLAZE_METAL_SHOVEL));
 
-    public static final Config config = new Config("shitmod", new MyContainer(), new configGroup());
-
-    public static final Item FABRIC_ITEM = new FabricItem(new Item.Settings().group(Shitmod.GENERAL_GROUP));
+    public static final Item PP = new FabricItem(new Item.Settings().group(Shitmod.GENERAL_GROUP));
 
     public static final Block FABRIC_BLOCK = new FabricBlock();
 
@@ -54,8 +50,6 @@ public class Shitmod implements ModInitializer {
     public static final Item ORANGE_JUICE = new OrangeJuice(new Item.Settings().group(ItemGroup.FOOD).rarity(Rarity.EPIC).food(new FoodComponent.Builder().hunger(200).saturationModifier(10f).snack().meat().alwaysEdible().statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 20*120, 5), 1f).statusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 20*120, 20), 1f).statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 20*120), 1f).statusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 20*120, 3), 1f).statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 20*120, 2), 1f).build()));
     
     public static final Item KINGSOUL_CHARM = new kingsoul(new Item.Settings().group(Shitmod.CHARMS_GROUP).maxDamage(500).fireproof());
-
-    public static final StatusEffect KINGSOUL_CHARM_EFFECT = new kingsoulEffect();
 
     public static final Item STALWART_SHELL_CHARM = new stalwartShell(new Item.Settings().group(Shitmod.CHARMS_GROUP).maxDamage(500).fireproof());
 
@@ -83,7 +77,7 @@ public class Shitmod implements ModInitializer {
 
     public static final ToolItem BLAZE_METAL_SHOVEL = new ShovelItem(blazeMetalMaterial.INSTANCE, 1f, 3.0f, new Item.Settings().group(Shitmod.TOOLS_GROUP).maxDamage(8000));
 
-    public static final ToolItem BLAZE_METAL_HOE = new blazeMetalHoe(blazeMetalMaterial.INSTANCE, new Item.Settings().group(Shitmod.TOOLS_GROUP).maxDamage(8000));
+    public static final ToolItem BLAZE_METAL_HOE = new blazeMetalHoe(blazeMetalMaterial.INSTANCE, -4, 1f, new Item.Settings().group(Shitmod.TOOLS_GROUP).maxDamage(8000));
 
     public static final Item BLAZE_METAL_INGOT = new blazeMetalIngot(new Item.Settings().group(Shitmod.GENERAL_GROUP));
 
@@ -111,14 +105,22 @@ public class Shitmod implements ModInitializer {
 
     public static final Item PULVERIZED_NETHERITE = new pulverizedNetherite(new Item.Settings().fireproof().group(Shitmod.GENERAL_GROUP));
 
+    public static final ToolItem COPPER_SWORD = new copperSword(copperMaterial.INSTANCE, 2, -2.4f, new Item.Settings().group(Shitmod.TOOLS_GROUP).maxDamage(250));
+
+    public static final ToolItem COPPER_PICKAXE = new copperPickaxe(copperMaterial.INSTANCE, 0, -2.8f, new Item.Settings().group(Shitmod.TOOLS_GROUP).maxDamage(250));
+
+    public static final ToolItem COPPER_AXE = new copperAxe(copperMaterial.INSTANCE, 5, -3.1f, new Item.Settings().group(Shitmod.TOOLS_GROUP).maxDamage(250));
+
+    public static final ToolItem COPPER_SHOVEL = new copperShovel(copperMaterial.INSTANCE, 0.5f, -3f, new Item.Settings().group(Shitmod.TOOLS_GROUP).maxDamage(250));
+
+    public static final ToolItem COPPER_HOE = new copperHoe(copperMaterial.INSTANCE, -3, -1f, new Item.Settings().group(Shitmod.TOOLS_GROUP).maxDamage(250));
+
     @Override
     public void onInitialize() {
 
-        config.load();
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "pp"), PP);
 
-        Registry.register(Registry.ITEM, new Identifier("shitmod", "fabric_item"), FABRIC_ITEM);
-
-        Registry.register(Registry.BLOCK, new Identifier("shitmod", "fabric_block"), FABRIC_BLOCK);
+        Registry.register(Registry.BLOCK, new Identifier("shitmod", "gay_block"), FABRIC_BLOCK);
         Registry.register(Registry.ITEM, new Identifier("shitmod", "fabric_block"), new BlockItem(FABRIC_BLOCK, new FabricItemSettings().group(ItemGroup.MISC)));
 
         Registry.register(Registry.ITEM, new Identifier("shitmod", "hausbommer"), HAUSBOMMER_ITEM);
@@ -132,8 +134,6 @@ public class Shitmod implements ModInitializer {
         Registry.register(Registry.ITEM, new Identifier("shitmod", "orange_juice"), ORANGE_JUICE);
 
         Registry.register(Registry.ITEM, new Identifier("shitmod", "kingsoul_charm"), KINGSOUL_CHARM);
-
-        Registry.register(Registry.STATUS_EFFECT, new Identifier("shitmod", "kingsoul_charm"), KINGSOUL_CHARM_EFFECT);
 
         Registry.register(Registry.ITEM, new Identifier("shitmod", "stalwart_shell_charm"), STALWART_SHELL_CHARM);
 
@@ -189,13 +189,15 @@ public class Shitmod implements ModInitializer {
 
         Registry.register(Registry.ITEM, new Identifier("shitmod", "seared_gold_ingot"), SEARED_GOLD_INGOT);
 
-        CustomPortalBuilder.beginPortal()  
-.frameBlock(Shitmod.FABRIC_BLOCK)  
-.lightWithItem(Shitmod.BLAZE_METAL_INGOT)  
-.destDimID(new Identifier("the_end"))  
-.tintColor(45,65,101)  
-.registerPortal();
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "copper_sword"), COPPER_SWORD);
 
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "copper_pickaxe"), COPPER_PICKAXE);
+
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "copper_axe"), COPPER_AXE);
+
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "copper_shovel"), COPPER_SHOVEL);
+
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "copper_hoe"), COPPER_HOE);
         
     }
     
