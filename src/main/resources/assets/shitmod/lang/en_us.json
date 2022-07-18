@@ -40,5 +40,6 @@
     "item.shitmod.copper_shovel": "Copper Shovel",
     "item.shitmod.copper_hoe": "Copper Hoe",
     "itemGroup.shitmod.general": "Shitmod Misc",
-    "itemGroup.shitmod.tools": "Shitmod Tools"
+    "itemGroup.shitmod.tools": "Shitmod Tools",
+    "item.shitmod.glock": "Glock"
 }
