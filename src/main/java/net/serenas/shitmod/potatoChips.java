@@ -1,5 +1,7 @@
 package net.serenas.shitmod;
 
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -24,8 +26,6 @@ int potatoChipsConsumed = 0;
     if (potatoChipsConsumed == 69) {
         PlayerEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 20 * 15, 4));
         potatoChipsConsumed-=69;
-        PlayerEntity.sendMessage(new LiteralText("I'm really fat/test"), false);
-        System.out.println("I'm really fat\n/test");
     }
     return new TypedActionResult<ItemStack>(ActionResult.SUCCESS, PlayerEntity.getStackInHand(Hand));
     }
