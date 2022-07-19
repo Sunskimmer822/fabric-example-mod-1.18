@@ -15,8 +15,10 @@ import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.PickaxeItem;
 import net.minecraft.item.ShovelItem;
 import net.minecraft.item.ToolItem;
+import net.minecraft.item.ToolMaterials;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
@@ -122,6 +124,8 @@ public class Shitmod implements ModInitializer {
 
     public static final Enchantment LIFESTEAL = new lifeStealEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.WEAPON, new EquipmentSlot[] {EquipmentSlot.MAINHAND});
 
+    public static final PickaxeItem HAMMER = new testHammer(ToolMaterials.NETHERITE, 3, 2, new Item.Settings().group(Shitmod.TOOLS_GROUP).fireproof().maxDamage(800));
+
     @Override
     public void onInitialize() {
 
@@ -211,5 +215,7 @@ public class Shitmod implements ModInitializer {
         Registry.register(Registry.SOUND_EVENT, new Identifier("shitmod", "glock_noise"), GLOCK_NOISE);
 
         Registry.register(Registry.ENCHANTMENT, new Identifier("shitmod", "lifesteal"), LIFESTEAL);
+
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "Hammer"), HAMMER);
     }
   }
