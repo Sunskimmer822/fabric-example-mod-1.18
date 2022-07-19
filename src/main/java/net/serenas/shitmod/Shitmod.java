@@ -116,9 +116,9 @@ public class Shitmod implements ModInitializer {
 
     public static final ToolItem COPPER_HOE = new copperHoe(copperMaterial.INSTANCE, -3, -1f, new Item.Settings().group(Shitmod.TOOLS_GROUP).maxDamage(250));
 
-    public static final Item GLOCK = new glock(new Item.Settings().group(Shitmod.TOOLS_GROUP).maxDamage(1000));
+    public static final Item GLOCK = new glock(new FabricItemSettings().group(Shitmod.TOOLS_GROUP).maxDamage(1000).rarity(Rarity.EPIC));
     
-    public static final SoundEvent GLOCK_NOISE = new SoundEvent(new Identifier("shitmod:glock"));
+    public static final SoundEvent GLOCK_NOISE = new SoundEvent(new Identifier("shitmod:glock_noise"));
 
     @Override
     public void onInitialize() {

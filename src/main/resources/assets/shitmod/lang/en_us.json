@@ -42,5 +42,5 @@
     "itemGroup.shitmod.general": "Shitmod Misc",
     "itemGroup.shitmod.tools": "Shitmod Tools",
     "item.shitmod.glock": "Glock",
-    "subtitles.shitmod.glock": "Glock Fires"
+    "subtitles.shitmod.glock_noise": "Glock Fires"
 }

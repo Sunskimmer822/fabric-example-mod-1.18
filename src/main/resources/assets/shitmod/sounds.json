@@ -1,8 +1,8 @@
 {
-    "glocknoise": {
-        "subtitle": "subtitles.shitmod.glock",
-        "shitmod": [
-            "shitmod:glock"
+    "glock_noise": {
+        "subtitle": "subtitles.shitmod.glock_noise",
+        "sounds": [
+            "shitmod:glock_noise"
         ]
     }
 }
