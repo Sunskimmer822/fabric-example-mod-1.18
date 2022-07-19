@@ -42,5 +42,8 @@
     "itemGroup.shitmod.general": "Shitmod Misc",
     "itemGroup.shitmod.tools": "Shitmod Tools",
     "item.shitmod.glock": "Glock",
-    "subtitles.shitmod.glock_noise": "Glock Fires"
+    "subtitles.shitmod.glock_noise": "Glock Fires",
+    "enchantment.shitmod.lifesteal": "Life Steal",
+    "enchantment.shitmod.explosion_aspect": "Explosion Aspect",
+    "enchantment.shitmod.explosive_thorns": "Explosive Thorns"
 }

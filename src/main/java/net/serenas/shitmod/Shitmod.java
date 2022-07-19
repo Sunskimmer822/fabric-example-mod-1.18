@@ -120,6 +120,8 @@ public class Shitmod implements ModInitializer {
     
     public static final SoundEvent GLOCK_NOISE = new SoundEvent(new Identifier("shitmod:glock_noise"));
 
+    public static final Enchantment LIFESTEAL = new lifeStealEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.WEAPON, new EquipmentSlot[] {EquipmentSlot.MAINHAND});
+
     @Override
     public void onInitialize() {
 
@@ -207,5 +209,7 @@ public class Shitmod implements ModInitializer {
         Registry.register(Registry.ITEM, new Identifier("shitmod", "glock"), GLOCK);
 
         Registry.register(Registry.SOUND_EVENT, new Identifier("shitmod", "glock_noise"), GLOCK_NOISE);
+
+        Registry.register(Registry.ENCHANTMENT, new Identifier("shitmod", "lifesteal"), LIFESTEAL);
     }
   }
