@@ -41,5 +41,6 @@
     "item.shitmod.copper_hoe": "Copper Hoe",
     "itemGroup.shitmod.general": "Shitmod Misc",
     "itemGroup.shitmod.tools": "Shitmod Tools",
-    "item.shitmod.glock": "Glock"
+    "item.shitmod.glock": "Glock",
+    "subtitles.shitmod.glock": "Glock Fires"
 }

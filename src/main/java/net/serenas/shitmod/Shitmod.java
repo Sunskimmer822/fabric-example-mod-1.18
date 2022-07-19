@@ -17,6 +17,7 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ShovelItem;
 import net.minecraft.item.ToolItem;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
@@ -116,6 +117,8 @@ public class Shitmod implements ModInitializer {
     public static final ToolItem COPPER_HOE = new copperHoe(copperMaterial.INSTANCE, -3, -1f, new Item.Settings().group(Shitmod.TOOLS_GROUP).maxDamage(250));
 
     public static final Item GLOCK = new glock(new Item.Settings().group(Shitmod.TOOLS_GROUP).maxDamage(1000));
+    
+    public static final SoundEvent GLOCK_NOISE = new SoundEvent(new Identifier("shitmod:glock"));
 
     @Override
     public void onInitialize() {
@@ -202,5 +205,7 @@ public class Shitmod implements ModInitializer {
         Registry.register(Registry.ITEM, new Identifier("shitmod", "copper_hoe"), COPPER_HOE);
 
         Registry.register(Registry.ITEM, new Identifier("shitmod", "glock"), GLOCK);
+
+        Registry.register(Registry.SOUND_EVENT, new Identifier("shitmod", "glock_noise"), GLOCK_NOISE);
     }
   }
