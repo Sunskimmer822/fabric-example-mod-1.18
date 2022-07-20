@@ -25,8 +25,6 @@ public class testHammer extends PickaxeItem {
             return true;
         }
         ItemStack mainHandStack = player.getMainHandStack();
-        
-        // Taken from Entity#rayTrace
         Vec3d vec3d_1 = player.getCameraPosVec(1);
         Vec3d vec3d_2 = player.getRotationVec(1);
         int range = 4;
@@ -41,10 +39,10 @@ public class testHammer extends PickaxeItem {
                     boolean canBreak = newState.getHardness(world, newPos) >= 0 || (!newState.isToolRequired() && mainHandStack.getMiningSpeedMultiplier(newState) > 1);
                     if (!canBreak)
                         continue;
-                    // Let's break the block!
                     world.breakBlock(newPos, true, player);
                 }
             }
         return true;
 
-}}
+    }
+}

@@ -124,7 +124,7 @@ public class Shitmod implements ModInitializer {
 
     public static final Enchantment LIFESTEAL = new lifeStealEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.WEAPON, new EquipmentSlot[] {EquipmentSlot.MAINHAND});
 
-    public static final PickaxeItem HAMMER = new testHammer(ToolMaterials.NETHERITE, 3, 2, new Item.Settings().group(Shitmod.TOOLS_GROUP).fireproof().maxDamage(800));
+    public static final PickaxeItem HAMMER = new testHammer(ToolMaterials.NETHERITE, 3, -1, new Item.Settings().group(Shitmod.TOOLS_GROUP).fireproof().maxDamage(2031));
 
     @Override
     public void onInitialize() {
@@ -216,6 +216,6 @@ public class Shitmod implements ModInitializer {
 
         Registry.register(Registry.ENCHANTMENT, new Identifier("shitmod", "lifesteal"), LIFESTEAL);
 
-        Registry.register(Registry.ITEM, new Identifier("shitmod", "Hammer"), HAMMER);
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "hammer"), HAMMER);
     }
   }
