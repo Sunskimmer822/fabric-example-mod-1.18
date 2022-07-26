@@ -2,6 +2,7 @@ package net.serenas.shitmod;
 
 
 import net.minecraft.block.BlockState;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.PickaxeItem;
@@ -44,5 +45,10 @@ public class testHammer extends PickaxeItem {
             }
         return true;
 
+    }
+
+    @Override
+    public void onCraft(ItemStack stack, World world, PlayerEntity player) {
+        stack.addEnchantment(Enchantments.EFFICIENCY, 5);
     }
 }
