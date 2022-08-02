@@ -126,6 +126,10 @@ public class Shitmod implements ModInitializer {
 
     public static final PickaxeItem HAMMER = new testHammer(ToolMaterials.NETHERITE, 3, -1, new Item.Settings().group(Shitmod.TOOLS_GROUP).fireproof().maxDamage(2031));
 
+    public static final StatusEffect BERSERK = new berserkEffect();
+
+    public static final Item BERSERKER_TOTEM = new berserkerTotem(new FabricItemSettings().group(Shitmod.GENERAL_GROUP).maxDamage(512).rarity(Rarity.EPIC));
+
     @Override
     public void onInitialize() {
 
@@ -217,5 +221,9 @@ public class Shitmod implements ModInitializer {
         Registry.register(Registry.ENCHANTMENT, new Identifier("shitmod", "lifesteal"), LIFESTEAL);
 
         Registry.register(Registry.ITEM, new Identifier("shitmod", "hammer"), HAMMER);
+
+        Registry.register(Registry.STATUS_EFFECT, new Identifier("shitmod", "berserk"), BERSERK);
+
+        Registry.register(Registry.ITEM, new Identifier("shitmod", "berserker_totem"), BERSERKER_TOTEM);
     }
   }

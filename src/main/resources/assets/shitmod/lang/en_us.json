@@ -46,5 +46,7 @@
     "enchantment.shitmod.lifesteal": "Life Steal",
     "enchantment.shitmod.explosion_aspect": "Explosion Aspect",
     "enchantment.shitmod.explosive_thorns": "Explosive Thorns",
-    "item.shitmod.hammer": "Hammer"
+    "item.shitmod.hammer": "Hammer",
+    "item.shitmod.berserker_totem": "Berserker Totem",
+    "effect.shitmod.berserk": "Berserk"
 }
