@@ -20,12 +20,17 @@ public class berserkerTotem extends Item{
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity playerEntity, Hand hand) {
         int rand = new Random().nextInt(5);
+        int rand2 = new Random().nextInt(3);
+        ItemStack itemStack = playerEntity.getStackInHand(hand);
         if (rand == 0) {
             rand++;
-            playerEntity.addStatusEffect(new StatusEffectInstance(Shitmod.BERSERK, 400, rand));
+            playerEntity.addStatusEffect(new StatusEffectInstance(Shitmod.BERSERK, 400*(rand2++), rand));
             return new TypedActionResult<ItemStack>(ActionResult.SUCCESS, playerEntity.getStackInHand(hand));
         }
-        playerEntity.addStatusEffect(new StatusEffectInstance(Shitmod.BERSERK, 400, rand));
+        playerEntity.addStatusEffect(new StatusEffectInstance(Shitmod.BERSERK, 400*(rand2++), rand));
+        if (!playerEntity.isCreative()){
+            itemStack.damage(1, playerEntity, (entity) -> entity.sendToolBreakStatus(hand));
+        }
 
 
         return new TypedActionResult<ItemStack>(ActionResult.SUCCESS, playerEntity.getStackInHand(hand));

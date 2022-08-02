@@ -24,8 +24,9 @@ public class berserkEffect extends StatusEffect{
     @Override
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
       if (entity instanceof PlayerEntity) {
-        ((PlayerEntity) entity).damage(DamageSource.MAGIC, (0.25f));
-        ((PlayerEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 2, amplifier*2, true, false, false));
+        ((PlayerEntity) entity).damage(DamageSource.MAGIC, (0.5f));
+        ((PlayerEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 2, amplifier*2, false, false, false));
+        ((PlayerEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 2, amplifier*2, false, false, false));
       }
     }
     
