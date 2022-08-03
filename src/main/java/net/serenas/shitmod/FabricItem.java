@@ -21,7 +21,9 @@ public class FabricItem extends Item {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity PlayerEntity, Hand hand) {
         PlayerEntity.playSound(SoundEvents.BLOCK_AMETHYST_BLOCK_CHIME, 1.0F, 1.0F);
         for (int i = 0; i < 50; i++) {
-            world.spawnEntity(new TntEntity(world, PlayerEntity.getX(), PlayerEntity.getY(), PlayerEntity.getZ(), PlayerEntity));
+            TntEntity tnt = new TntEntity(world, PlayerEntity.getX(), PlayerEntity.getY(), PlayerEntity.getZ(), PlayerEntity);
+            tnt.setFuse(1);
+            world.spawnEntity(tnt);
           }
         return new TypedActionResult<ItemStack>(ActionResult.SUCCESS, PlayerEntity.getStackInHand(hand));
     }

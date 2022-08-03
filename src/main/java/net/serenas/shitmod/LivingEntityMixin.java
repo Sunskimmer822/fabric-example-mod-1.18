@@ -12,13 +12,10 @@ import net.minecraft.entity.damage.DamageSource;
 
 @Mixin(LivingEntity.class) 
 public class LivingEntityMixin {
-    @Inject(at = @At("HEAD"), method = "modifyAppliedDamage")
+    @Inject(at = @At("HEAD"), method = "Lnet/minecraft/entity/LivingEntity;modifyAppliedDamage(Lnet/minecraft/entity/damage/DamageSource;F)F")
 private void injectMethod(DamageSource source, Float amount, CallbackInfo info) {
-    Random r = new Random();
-    int low = 1;
-    int high = 5;
-    int result = r.nextInt(high-low) + low;
-    if (result == 5) {
+    int rand = new Random().nextInt(5);
+    if (rand == 4) {
         amount = 0f;
     }
 }
