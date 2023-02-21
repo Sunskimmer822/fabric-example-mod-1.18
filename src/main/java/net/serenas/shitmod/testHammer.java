@@ -40,7 +40,8 @@ public class testHammer extends PickaxeItem {
                     boolean canBreak = newState.getHardness(world, newPos) >= 0 || (!newState.isToolRequired() && mainHandStack.getMiningSpeedMultiplier(newState) > 1);
                     if (!canBreak)
                         continue;
-                    world.breakBlock(newPos, true, player);
+                    if (player.isCreative()) world.breakBlock(newPos, false, player);
+                    if (!player.isCreative()) world.breakBlock(newPos, true, player);
                 }
             }
         return true;

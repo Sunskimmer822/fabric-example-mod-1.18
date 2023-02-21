@@ -23,7 +23,7 @@ public class glock extends Item{
         arro.setOwner(playerEntity);
         world.spawnEntity(arro);
         if (!world.isClient()) {
-            world.playSound(null, playerEntity.getX(), playerEntity.getY(), playerEntity.getZ(), Shitmod.GLOCK_NOISE, SoundCategory.NEUTRAL, 1f, 1f, 1);
+            world.playSound(null, playerEntity.getX(), playerEntity.getY(), playerEntity.getZ(), Shitmod.GLOCK_NOISE_EVENT, SoundCategory.NEUTRAL, 1f, 1f, 1);
         }
         playerEntity.getMainHandStack().damage(1,playerEntity,e-> e.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND));
         playerEntity.getItemCooldownManager().set(this, 20);

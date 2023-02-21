@@ -26,8 +26,6 @@ public class rockWithAStringAround extends Item {
     } else if (messageToSay > 0.6) {
             System.out.println("placeholder 3");
     }
-    
-
     return new TypedActionResult<ItemStack>(ActionResult.SUCCESS, PlayerEntity.getStackInHand(Hand));
     }
 
